@@ -1,0 +1,31 @@
+{
+    "name":"ytestrunner",
+    "author":"Krishnan Anantheswaran <kananthmail-github@yahoo.com>",
+    "description":"Test runner for yui3 or standalone YUITest tests callable as an 'npm test' script which supports saving of results, instrumentation and coverage and overrides for automated builds",
+    "TODO":"add correct URLs in this file for repository issues, etc.",
+    "version":"0.1.0",
+    "repository":{
+        "url":""
+    },
+    "bin":{
+        "ytestrunner":"lib/cli.js"
+    },
+    "scripts":{
+        "test":"test/run.js"
+    },
+    "engines":{
+        "node":">=0.4.12"
+    },
+    "dependencies":{
+        "mkdirp":"*",
+        "colors":"*",
+        "fileset": "*",
+        "nopt":"*",
+        "resolve": "*",
+        "async":"*"
+    },
+    "devDependencies":{
+        "rimraf": "*",
+        "nodeunit":"*"
+    }
+}

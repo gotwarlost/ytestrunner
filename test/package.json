@@ -1,0 +1,11 @@
+{
+    "author": "Krishnan Anantheswaran <kananthmail-github@yahoo.com>",
+    "name": "ytestrunner-tmp-test",
+    "description": "Sample project get ytestrunner and yui deps for all samples",
+    "version": "0.0.1",
+    "devDependencies": {
+        "yuitest": "*",
+        "yui" : "*",
+        "ytestrunner": "*"
+    }
+}
