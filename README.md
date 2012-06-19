@@ -159,5 +159,3 @@ Credits
    * [nzakas](https://github.com/nzakas) - test loading strategy for `YUITest` tests heavily influenced by command line support in that module
    * [davglass](https://github.com/davglass) - for review of this module
 
-
-
