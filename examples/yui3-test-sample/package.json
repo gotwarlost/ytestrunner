@@ -1,0 +1,20 @@
+{
+  "author": "Krishnan Anantheswaran <kananthmail-github@yahoo.com>",
+  "name": "yui3-test-sample",
+  "description": "Sample project to test yui3 embedded runner",
+  "version": "0.0.1",
+  "repository": {
+    "url": ""
+  },
+  "scripts": {
+      "test": "ytestrunner --yui3 -c "
+  },
+  "engines": {
+    "node": ">0.4.12"
+  },
+  "dependencies": {},
+  "devDependencies": {
+      "yui": "*",
+      "ytestrunner": "*"
+  }
+}
