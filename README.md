@@ -1,4 +1,4 @@
-ytestrunner
+ytestrunner [![Build Status](https://secure.travis-ci.org/gotwarlost/ytestrunner.png)](http://travis-ci.org/gotwarlost/ytestrunner)
 ===========
 
 Run YUI tests for node packages using "npm test" with support for saving test results, coverage and more. Supports YUITest as well as YUI3 style tests.
