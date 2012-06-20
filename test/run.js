@@ -50,12 +50,13 @@ function runTests(err, pat) {
     reporter.run(files);
 }
 
+//if (process.env.noisy) {
+    require('./common/watcher').noisy(true);
+//}
+
 delete process.env.ytestopts; //ensure this does not cause a side-effect in any way
 if (process.env.localtest) { //assume setup run
     var testPat = process.env.testpat || null;
-    if (process.env.noisy) {
-        require('./common/watcher').noisy(true);
-    }
     runTests(null, testPat);
 } else {
     setup(runTests);
