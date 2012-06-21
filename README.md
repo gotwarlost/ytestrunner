@@ -5,6 +5,8 @@ Run YUI tests for node packages using "npm test" with support for saving test re
 
 To use this module, declare it as a `devDependency` along with the YUI module that you are using for tests (`yui` for yui3 style tests or `yuitest` for standalone yui tests).
 
+![screenshot](http://github.com/gotwarlost/ytestrunner/raw/examples/screenshot.png)
+
 Usage
 -----
 
