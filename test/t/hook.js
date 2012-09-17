@@ -1,5 +1,5 @@
 /*jslint nomen: true */
-var coverage = require('../../lib/coverage/index'),
+var coverage = require('../../lib/coverage/yui/index'),
     path = require('path'),
     a1 = path.resolve(__dirname, '..', 'data', 'dir1', 'a1.js'),
     a2 = path.resolve(__dirname, '..', 'data', 'dir2', 'subdir', 'a2.js'),

@@ -3,7 +3,7 @@ var path = require('path'),
     rimraf = require('rimraf'),
     dataDir = path.resolve(__dirname, '..', 'data', 'instrumenter'),
     outDir = path.resolve(dataDir, 'output'),
-    Instrumenter = require('../../lib/coverage').Instrumenter;
+    Instrumenter = require('../../lib/coverage/yui').Instrumenter;
 
 module.exports = {
     setUp: function (cb) { rimraf.sync(outDir); cb(); },
