@@ -9,6 +9,7 @@ module.exports = {
     "failure/ load error path": common.createErrorTestCase(eRoot, true),
     "failure path with env overrides": common.createErrorTestCase(eRoot, true, true),
     "reporting tests": reporting.createResultsTestCase(root, true),
-    "coverage reporting tests": reporting.createCoverageTestCase(root, true)
+    "coverage reporting tests": reporting.createCoverageTestCase(root, true),
+    "coverage reporting tests with istanbul": reporting.createCoverageTestCase(root, true, true)
 };
 

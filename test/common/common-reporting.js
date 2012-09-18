@@ -24,7 +24,7 @@ function getTest(root, file, format, custom) {
     };
 }
 
-function getCoverageTest(root, dir, expected, format, custom) {
+function getCoverageTest(root, dir, expected, format, istanbul, custom) {
     return function (test) {
         var expectedDir = path.resolve(root, dir),
             file = path.resolve(expectedDir, expected);
@@ -35,10 +35,14 @@ function getCoverageTest(root, dir, expected, format, custom) {
         if (custom) {
             args.push('--coverage-file=' + custom);
         }
+        if (istanbul) {
+            args.push('--istanbul=true');
+        }
         watcher.run(args, function (err) {
             test.ok(!err, "should work without errors");
-            test.ok(watcher.contains('Final summary: Passed: 1, Failed: 0, Skipped: 0, Total: 1, Load errors: 0, Line coverage: 100%, Function coverage: 100%'.green.bold),
-                'should contain correct summary');
+            test.ok(watcher.matches(/Final summary: Passed: 1, Failed: 0, Skipped: 0, Total: 1, Load errors: 0/), "should contain correct summary");
+            test.ok(watcher.matches(/Line coverage: 100%/), "should have correct line coverage");
+            test.ok(watcher.matches(/Function coverage: 100%/), "should have correct function coverage");
             test.ok(path.existsSync(expectedDir), 'should write ' + dir);
             test.ok(path.existsSync(file), 'should write ' + file);
             test.done();
@@ -82,7 +86,7 @@ module.exports = {
         };
     },
 
-    createCoverageTestCase: function (root, yui3, lcov, fcov) {
+    createCoverageTestCase: function (root, yui3, istanbul, lcov, fcov) {
         yui3 = !!yui3;
         lcov = lcov || '100%';
         fcov = fcov || '100%';
@@ -94,11 +98,11 @@ module.exports = {
 
                 "with --save-coverage turned on and nothing more" : getCoverageTest(root, 'coverage', 'lcov.info'),
                 "with multiple formats of reports": {
-                    "lcov" : getCoverageTest(root, 'coverage', 'lcov.info', 'lcov'),
-                    "json": getCoverageTest(root, 'coverage', 'test-coverage.json', 'json'),
-                    "html": getCoverageTest(root, 'coverage', 'index.html', 'html')
+                    "lcov" : getCoverageTest(root, 'coverage', 'lcov.info', 'lcov', istanbul),
+                    "json": getCoverageTest(root, 'coverage', 'test-coverage.json', 'json', istanbul),
+                    "html": getCoverageTest(root, 'coverage', 'index.html', 'html', istanbul)
                 },
-                "with custom file names": getCoverageTest(root, 'my-coverage', 'cov.json', null, 'my-coverage/cov')
+                "with custom file names": getCoverageTest(root, 'my-coverage', 'cov.json', null, istanbul, 'my-coverage/cov')
             }
         };
     }

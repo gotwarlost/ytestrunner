@@ -25,7 +25,8 @@
         "fileset":"*",
         "nopt":"*",
         "resolve":"*",
-        "async":"*"
+        "async":"*",
+        "istanbul": "*"
     },
     "devDependencies":{
         "rimraf":"*",

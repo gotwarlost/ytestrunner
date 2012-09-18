@@ -10,5 +10,6 @@ module.exports = {
     "failure/ load error path": common.createErrorTestCase(eRoot, false),
     "failure path with env overrides": common.createErrorTestCase(eRoot, false, true),
     "reporting tests": reporting.createResultsTestCase(root, false),
-    "coverage reporting tests": reporting.createCoverageTestCase(root, false)
+    "coverage reporting tests": reporting.createCoverageTestCase(root, false, false),
+    "coverage reporting tests with istanbul": reporting.createCoverageTestCase(root, false, true)
 };
