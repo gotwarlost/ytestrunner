@@ -59,7 +59,6 @@ Command line options
       --tmp <dir>                : tmp directory under which instrumented files will be written
                                    (default: /tmp)
       --colors                   : show colored output (use --no-colors to disable)
-                                   (default: true)
 
     Tests and results
       --include <pattern>        : include file patterns for test files
@@ -69,21 +68,24 @@ Command line options
       --save-results             : save results to disk
       --results-format <format>  : results file format
       --results-file <name>      : basename of results file without extension
-                                   (default: ./results)
+                                   (default: results)
 
     Instrumentation and coverage
       --coverage, -c             : enable instrumentation and coverage stats
+      --istanbul                 : use istanbul instead of YUI coverage for instrumentation and coverage stats
       --fast-cover               : skip source coverage if a newer instrumented file found from previous run
       --cov-include <pattern>    : include file patterns for JS files to be instrumented
-                                   (default: [*.js, lib/**/*.js])
+                                   (default: [**/*.js])
       --cov-exclude <pattern>    : exclude file patterns for instrumentation
-                                   (default: [**/.*, **/node_modules/**])
+                                   (default: [test/**/*.js, tests/**/*.js, **/.*, **/node_modules/**])
       --save-coverage            : save JSON coverage information to disk
       --coverage-file <name>     : basename of JSON coverage file without extension
-                                   (default: ./coverage/test-coverage)
+                                   (default: coverage/test-coverage)
       --coverage-report-format <format> : format of coverage report (default: lcov)
 
-In addition, the environment variable `ytestopts` can be set with override options. These take precedence over the options passed to command line.
+
+    In addition, the environment variable [ytestopts] can be set with override options.
+    These take precedence over the options passed to command line.
 
 Using this module effectively
 -----------------------------
