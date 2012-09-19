@@ -2,7 +2,7 @@
     "name":"ytestrunner",
     "author":"Krishnan Anantheswaran <kananthmail-github@yahoo.com>",
     "description":"Run YUI tests for node packages using npm test with support for saving test results, coverage and more. Supports YUITest as well as YUI3 style tests.",
-    "version":"0.2.2",
+    "version":"0.2.3",
     "repository":{
         "type":"git",
         "url":"git://github.com/gotwarlost/ytestrunner.git"
