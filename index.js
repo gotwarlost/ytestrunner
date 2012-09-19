@@ -27,7 +27,7 @@
 module.exports = {
     Yui3TestRunner: require('./lib/yui3-test-runner'),
     YuiTestRunner: require('./lib/yuitest-runner'),
-    coverage: require('./lib/coverage'),
+    coverage: require('./lib/coverage/yui'),
     cli: require('./lib/cli')
 };
 
