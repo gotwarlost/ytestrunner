@@ -26,7 +26,7 @@ module.exports = {
                     });
                 },
                 "with coverage turned on": {
-                    setUp: function (cb) { args.push.apply(args, ['--coverage=true', '--verbose=true']); cb(); },
+                    setUp: function (cb) { args.push.apply(args, ['--coverage=true', '--verbose=true', '--istanbul=false']); cb(); },
                     "should calculate coverage": function (test) {
                         watcher.run(args, function (err) {
                             test.ok(!err, "should work without errors");
