@@ -26,7 +26,8 @@
         "nopt":"*",
         "resolve":"*",
         "async":"*",
-        "istanbul": "*"
+        "istanbul": "*",
+        "yui-istanbul": "*"
     },
     "devDependencies":{
         "rimraf":"*",
